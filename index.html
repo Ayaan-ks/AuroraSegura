@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Segura - Emergências Médicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="home" id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar" id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <span class="logo-text">AURORA<span class="logo-highlight">SEGURA</span></span>
+            </div>
+            
+            <div class="nav-menu" id="navbarResponsive">
+                <ul>
+                    <li><a href="#home" class="nav-link">INÍCIO</a></li>
+                    <li><a href="#emergencia" class="nav-link">EMERGÊNCIAS</a></li>
+                    <li><a href="#procedimentos" class="nav-link">PROCEDIMENTOS</a></li>
+                    <li><a href="#kit" class="nav-link">KIT SOCORROS</a></li>
+                    <li><a href="#prevencao" class="nav-link">PREVENÇÃO</a></li>
+                    <li><a href="#contatos" class="nav-link">CONTATOS</a></li>
+                    <li><a href="desenvolvedores.html"class="nav-link-external">DEV'S</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="masthead" id="home">
+        <div class="emergency-alert">
+            <div class="alert-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>EMERGÊNCIA MÉDICA? LIGUE <strong>192</strong> IMEDIATAMENTE</span>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">AURORA<span>SEGURA</span></h1>
+            <h2 class="hero-subtitle">Assistência Médica de Emergência Educacional</h2>
+            <p class="hero-description">Guia rápido para emergências médicas. Saiba o que fazer em situações críticas.</p>
+            <div class="hero-buttons">
+                <a class="btn btn-emergency" href="#contatos">
+                    <i class="fas fa-phone"></i> CONTATOS
+                </a>
+                <a class="btn btn-secondary" href="#procedimentos">
+                    <i class="fas fa-book-medical"></i> PROCEDIMENTOS
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Emergency Section -->
+    <section class="emergency-section" id="emergencia">
+        <div class="section-header">
+            <h2>Tipos de Emergência</h2>
+            <p>Identifique a situação e saiba como agir rapidamente</p>
+        </div>
+
+        <div class="emergency-content">
+            <div class="container">
+                <div class="cards-grid">
+                    <div class="emergency-card critical">
+                        <a href="pages/paradacardiaca.html" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h4>Parada Cardíaca</h4>
+                            <p>RCP imediata e desfibrilação</p>
+                            <div class="card-time">ATENDIMENTO IMEDIATO</div>
+                        </a>
+                    </div>
+
+                    <div class="emergency-card urgent">
+                        <a href="pages/intoxicacao.html" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <h4>Intoxicação</h4>
+                            <p>Alimento, medicação, veneno</p>
+                            <div class="card-time">ATENDIMENTO URGENTE</div>
+                            </a> 
+                    </div>
+
+                    <div class="emergency-card serious">
+                        <a href="pages/avc.html" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>AVC / Ataque Cerebral</h4>
+                            <p>Sinais de derrame cerebral</p>
+                            <div class="card-time">ATÉ 4 HORAS</div>
+                        </a>
+                    </div>
+
+                    <div class="emergency-card moderate">
+                        <a href="pages/traumatismo.html" style="text-decoration: none; color: inherit; display: block;">
+                            <div class="card-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <h4>Fraturas e Traumas</h4>
+                            <p>Quedas, acidentes, lesões</p>
+                            <div class="card-time">ATÉ 6 HORAS</div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procedures Section -->
+    <section class="procedures-section" id="procedimentos">
+        <div class="section-header">
+            <h2>Procedimentos de Emergência</h2>
+            <p>Passo a passo para situações críticas</p>
+        </div>
+
+        <div class="procedures-content">
+            <div class="container">
+                <!-- RCP -->
+                <div class="procedure-item">
+                    <div class="procedure-image">
+                        <img src="assets/img/rcp-procedure.jpg" alt="RCP - Reanimação Cardiopulmonar">
+                    </div>
+                    <div class="procedure-text">
+                        <h3>RCP - Reanimação Cardiopulmonar</h3>
+                        <div class="procedure-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>Verifique a Responsividade</h4>
+                                    <p>Chame a pessoa e sacuda gentilmente os ombros</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>Peça Ajuda</h4>
+                                    <p>Ligue 192 imediatamente ou peça para alguém ligar</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>Inicie as Compressões</h4>
+                                    <p>100-120 compressões por minuto no centro do peito</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Heimlich -->
+                <div class="procedure-item reverse">
+                    <div class="procedure-image">
+                        <img src="assets/img/heimlich.webp" alt="Manobra de Heimlich">
+                    </div>
+                    <div class="procedure-text">
+                        <h3>Engasgo - Manobra de Heimlich</h3>
+                        <div class="procedure-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>Identifique o Engasgo</h4>
+                                    <p>Pessoa não consegue falar, tossir ou respirar</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>Posicione-se</h4>
+                                    <p>Fique atrás da pessoa e abrace sua cintura</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>Aplique Compressões</h4>
+                                    <p>Compressões rápidas para cima no abdômen</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controle de Sangramento -->
+                <div class="procedure-item">
+                    <div class="procedure-image">
+                        <img src="assets/img/sangramento.jpg" alt="Controle de Sangramento">
+                    </div>
+                    <div class="procedure-text">
+                        <h3>Controle de Sangramento</h3>
+                        <div class="procedure-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>Proteja-se</h4>
+                                    <p>Use luvas para evitar contato com sangue</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>Aplique Pressão Direta</h4>
+                                    <p>Pressione firmemente sobre o ferimento com gaze ou pano limpo</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>Eleve o Ferimento</h4>
+                                    <p>Levante o membro lesionado acima do nível do coração</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Queimaduras -->
+                <div class="procedure-item reverse">
+                    <div class="procedure-image">
+                        <img src="assets/img/queimadura.jpg" alt="Tratamento de Queimaduras">
+                    </div>
+                    <div class="procedure-text">
+                        <h3>Tratamento de Queimaduras</h3>
+                        <div class="procedure-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>Resfrie a Área</h4>
+                                    <p>Use água corrente em temperatura ambiente por 10-15 minutos</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>Proteja a Queimadura</h4>
+                                    <p>Cubra com gaze ou pano limpo sem apertar</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>Não Use Produtos</h4>
+                                    <p>Evite pomadas, manteiga, óleo ou outros produtos caseiros</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kit Section -->
+    <section class="kit-section" id="kit">
+        <div class="section-header">
+            <h2>Kit de Primeiros Socorros</h2>
+            <p>Itens essenciais para emergências médicas</p>
+        </div>
+
+        <div class="kit-content">
+            <div class="container">
+            <a href="pages/curativos.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="cards-grid">
+                    <div class="kit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-band-aid"></i>
+                        </div>
+
+                        <h4>Curativos</h4>
+                        <p>Gazes, esparadrapo, ataduras</p>
+                    </div>
+            </a>
+            <a href="pages/medicamentos.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="kit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h4>Medicamentos</h4>
+                        <p>Analgésicos, antitérmicos</p>
+                    </div>
+            </a>
+            <a href="pages/intrumentos.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="kit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-toolbox"></i>
+                        </div>
+                        <h4>Instrumentos</h4>
+                        <p>Termômetro, tesoura, pinça</p>
+                    </div>
+            </a>
+            <a href="pages/prevencao.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="kit-card">
+                        <div class="card-icon">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                        <h4>Proteção</h4>
+                        <p>Luvas, máscaras, álcool gel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </section>
+
+    <!-- Prevention Section -->
+    <section class="prevention-section" id="prevencao">
+        <div class="section-header">
+            <h2>Prevenção de Acidentes</h2>
+            <p>Medidas para evitar situações de emergência</p>
+        </div>
+
+        <div class="prevention-content">
+            <div class="container">
+            <a href="pages/acidentedomestico.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="cards-grid">
+                    <div class="prevention-card">
+                        <div class="card-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>Segurança Doméstica</h4>
+                        <p>Prevenção de quedas e queimaduras</p>
+                    </div>
+            </a>
+            <a href="pages/transito.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="prevention-card">
+                        <div class="card-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Trânsito Seguro</h4>
+                        <p>Cinto de segurança e direção defensiva</p>
+                    </div>
+            </a>
+            <a href="pages/alimentacao.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="prevention-card">
+                        <div class="card-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>Alimentação</h4>
+                        <p>Prevenção de engasgos e alergias</p>
+                    </div>
+            </a>
+            <a href="pages/saude.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="prevention-card">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Saúde</h4>
+                        <p>Check-ups e cuidados preventivos</p>
+            
+                    </div>
+            </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section class="emergency-contacts" id="contatos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contatos de Emergência</h2>
+                <p>Ligue imediamente em caso de emergência</p>
+            </div>
+            
+            <div class="contacts-grid">
+                <div class="contact-card samu" data-number="192">
+                    <div class="contact-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>SAMU</h3>
+                    <p class="contact-number">192</p>
+                    <p class="contact-desc">Emergência Médica</p>
+                    <button class="btn-call" onclick="callEmergency('192')">
+                        <i class="fas fa-phone"></i> LIGAR
+                    </button>
+                </div>
+
+                <div class="contact-card bombeiros" data-number="193">
+                    <div class="contact-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h3>Bombeiros</h3>
+                    <p class="contact-number">193</p>
+                    <p class="contact-desc">Incêndios e Resgates</p>
+                    <button class="btn-call" onclick="callEmergency('193')">
+                        <i class="fas fa-phone"></i> LIGAR
+                    </button>
+                </div>
+
+                <div class="contact-card policia" data-number="190">
+                    <div class="contact-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Polícia Militar</h3>
+                    <p class="contact-number">190</p>
+                    <p class="contact-desc">Emergências Policiais</p>
+                    <button class="btn-call" onclick="callEmergency('190')">
+                        <i class="fas fa-phone"></i> LIGAR
+                    </button>
+                </div>
+
+                <div class="contact-card toxicologico" data-number="0800-722-6001">
+                    <div class="contact-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Centro Toxicológico</h3>
+                    <p class="contact-number">0800 722 6001</p>
+                    <p class="contact-desc">Intoxicações</p>
+                    <button class="btn-call" onclick="callEmergency('08007226001')">
+                        <i class="fas fa-phone"></i> LIGAR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AURORA SEGURA</h4>
+                    <p>Guia de emergências médicas para situações críticas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>LINKS RÁPIDOS</h4>
+                    <a href="#home">Início</a>
+                    <a href="#emergencia">Emergências</a>
+                    <a href="#procedimentos">Procedimentos</a>
+                    <a href="#contatos">Contatos</a>
+                </div>
+                <div class="footer-section">
+                    <h4>EMERGÊNCIA</h4>
+                    <p class="emergency-number">LIGUE 192</p>
+                    <p>SAMU - Atendimento Móvel de Urgência</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aurora Segura. Site educativo para orientação em emergências médicas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

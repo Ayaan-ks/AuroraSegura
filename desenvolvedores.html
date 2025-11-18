@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvedores - Aurora Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para a página de desenvolvedores */
+        .developers-section {
+            background: var(--dark-gray);
+            padding: 80px 0;
+            min-height: 100vh;
+        }
+
+        .developers-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .developers-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .developers-header h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--pure-white);
+            margin-bottom: 1rem;
+        }
+
+        .developers-header p {
+            font-size: 1.2rem;
+            color: var(--light-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .developers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .developer-card {
+            background: var(--pure-black);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--medium-gray);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .developer-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-red);
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
+        }
+
+        .developer-header {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .developer-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--pure-white);
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            background: var(--dark-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .developer-photo i {
+            font-size: 4rem;
+            color: var(--pure-white);
+        }
+
+        .developer-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .developer-name {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--pure-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .developer-role {
+            font-size: 1.1rem;
+            color: var(--off-white);
+            font-weight: 500;
+        }
+
+        .developer-content {
+            padding: 2rem;
+        }
+
+        .developer-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+            color: var(--light-gray);
+        }
+
+        .info-item i {
+            color: var(--primary-red);
+            width: 20px;
+        }
+
+        .developer-bio {
+            margin-bottom: 2rem;
+        }
+
+        .developer-bio h3 {
+            font-family: var(--font-heading);
+            color: var(--pure-white);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-left: 3px solid var(--primary-red);
+            padding-left: 1rem;
+        }
+
+        .developer-bio p {
+            color: var(--light-gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .developer-skills {
+            margin-bottom: 2rem;
+        }
+
+        .developer-skills h3 {
+            font-family: var(--font-heading);
+            color: var(--pure-white);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-left: 3px solid var(--primary-red);
+            padding-left: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .skill-item {
+            background: var(--dark-gray);
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--pure-white);
+            border: 1px solid var(--medium-gray);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: var(--primary-red);
+            transform: translateY(-2px);
+        }
+
+        .developer-contact {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--dark-gray);
+            color: var(--pure-white);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        .contact-link:hover {
+            background: var(--primary-red);
+            transform: translateY(-2px);
+        }
+
+        .project-info {
+            background: var(--pure-black);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid var(--primary-red);
+            margin-top: 4rem;
+        }
+
+        .project-info h2 {
+            font-family: var(--font-heading);
+            color: var(--pure-white);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .project-info p {
+            color: var(--light-gray);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.8rem;
+            background: var(--primary-red);
+            color: var(--pure-white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .back-button:hover {
+            background: var(--bright-red);
+            transform: translateY(-2px);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .developers-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .developers-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .developer-header {
+                padding: 1.5rem;
+            }
+
+            .developer-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .developer-photo i {
+                font-size: 3rem;
+            }
+
+            .developer-name {
+                font-size: 1.5rem;
+            }
+
+            .developer-content {
+                padding: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+
+            .developer-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-link {
+                width: 100%;
+                max-width: 200px;
+                justify-content: center;
+            }
+
+            .project-info {
+                padding: 2rem 1rem;
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .developers-section {
+                padding: 60px 0;
+            }
+
+            .developers-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .developers-header p {
+                font-size: 1rem;
+            }
+
+            .developer-name {
+                font-size: 1.3rem;
+            }
+
+            .developer-role {
+                font-size: 1rem;
+            }
+
+            .project-info h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="home" id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar" id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <span class="logo-text">AURORA<span class="logo-highlight">SEGURA</span></span>
+            </div>
+            
+            <div class="nav-menu" id="navbarResponsive">
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">INÍCIO</a></li>
+                    <li><a href="index.html#emergencia" class="nav-link">EMERGÊNCIAS</a></li>
+                    <li><a href="index.html#procedimentos" class="nav-link">PROCEDIMENTOS</a></li>
+                    <li><a href="index.html#kit" class="nav-link">KIT SOCORROS</a></li>
+                    <li><a href="index.html#prevencao" class="nav-link">PREVENÇÃO</a></li>
+                    <li><a href="index.html#contatos" class="nav-link">CONTATOS</a></li>
+                     <li><a href="desenvolvedores.html" class="nav-link">DEV'S</a></li>
+                </ul>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Developers Section -->
+    <section class="developers-section">
+        <div class="developers-container">
+            <div class="developers-header">
+                <h1>DESENVOLVEDORES</h1>
+                <p>Conheça a equipe por trás do Aurora Segura</p>
+            </div>
+
+            <div class="developers-grid">
+                <!-- Desenvolvedor 1 -->
+                <div class="developer-card">
+                    <div class="developer-header">
+                        <div class="developer-photo">
+                                                       
+                            <img src="assets/img/WhatsApp Image 2025-11-16 at 22.03.42.jpeg" alt="Nome do Desenvolvedor 1">
+                            
+                        </div>
+                        <h2 class="developer-name">Késia Ramos</h2>
+                        <p class="developer-role">Técnica de Informática</p>
+                    </div>
+                    
+                    <div class="developer-content">
+                        <div class="developer-info">
+                            <div class="info-item">
+                                <i class="fas fa-user-tag"></i>
+                                <span>Idade: 17 anos</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Cidade, Estado: Floriano-PI</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Curso/Faculdade: Informática - IFPI</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Interesses: Tecnologia, Segurança e Desenho</span>
+                            </div>
+                        </div>
+
+                        <div class="developer-bio">
+                            <h3>SOBRE MIM</h3>
+                            <p>
+                                Sou uma técnica de informática apaixonada por tecnologia. 
+                                Tenho experiência em desenvolvimento web, com foco 
+                                em criar soluções que impactem positivamente a vida das pessoas. 
+                                No Aurora Segura, trabalhei no desenvolvimento front-end e 
+                                na integração das funcionalidades de emergência.
+                            </p>
+                        </div>
+
+                        <div class="developer-skills">
+                            <h3>HABILIDADES</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">HTML/CSS</div>
+                                <div class="skill-item">PYTHON</div>
+                                <div class="skill-item">PACOTE OFFICE</div>
+                                <div class="skill-item">C#</div>
+                                <div class="skill-item">JAVA</div>
+                            </div>
+                        </div>
+
+                        <div class="developer-contact">
+                            <a href="rkesia862@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                            <a href="https://github.com/Ayaan-ks" class="contact-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desenvolvedor 2 -->
+                <div class="developer-card">
+                    <div class="developer-header">
+                        <div class="developer-photo">
+                            
+                            <img src="assets/img/WhatsApp Image 2025-11-16 at 22.02.46.jpeg" alt="Nome do Desenvolvedor 2">
+                        
+                        </div>
+                        <h2 class="developer-name">Maria Antônia</h2>
+                        <p class="developer-role">Técnica em Informática</p>
+                    </div>
+                    
+                    <div class="developer-content">
+                        <div class="developer-info">
+                            <div class="info-item">
+                                <i class="fas fa-user-tag"></i>
+                                <span>Idade: 17 anos</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Cidade, Estado: Floriano-PI</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Curso/Faculdade: Informática - IFPI</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Interesses: Tecnologia</span>
+                            </div>
+                        </div>
+
+                        <div class="developer-bio">
+                            <h3>SOBRE MIM</h3>
+                            <p>
+                                Técnica de Informática. 
+                                Tenho grande interesse na tecnologia e suas aplicações.
+                                No projeto Aurora Segura, fui responsável pela 
+                                pesquisa e informações seguras para a integração informativa do site.
+                            </p>
+                        </div>
+
+                        <div class="developer-skills">
+                            <h3>HABILIDADES</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">C#</div>
+                                <div class="skill-item">SQL</div>
+                                <div class="skill-item">Java</div>
+                                <div class="skill-item">PACOTE OFFICE</div>
+                            </div>
+                        </div>
+
+                        <div class="developer-contact">
+                            <a href="mailto:colega@exemplo.com" class="contact-link">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                            <a href="https://github.com/Mari-tsuki" class="contact-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <h2>SOBRE O PROJETO AURORA SEGURA</h2>
+                <p>
+                    O Aurora Segura é uma plataforma educacional de emergências médicas desenvolvida 
+                    com o objetivo de salvar vidas através da informação. Nosso compromisso é fornecer 
+                    orientações claras e precisas para situações de emergência, tornando o conhecimento 
+                    em primeiros socorros acessível a todos.
+                </p>
+                <p>
+                    Este projeto foi desenvolvido com as mais modernas tecnologias web e seguindo 
+                    as diretrizes de órgãos de saúde, garantindo confiabilidade 
+                    e precisão nas informações apresentadas.
+                </p>
+                <a href="index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> VOLTAR PARA O SITE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AURORA SEGURA</h4>
+                    <p>Guia de emergências médicas para situações críticas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>LINKS RÁPIDOS</h4>
+                    <a href="index.html#home">Início</a>
+                    <a href="index.html#emergencia">Emergências</a>
+                    <a href="index.html#procedimentos">Procedimentos</a>
+                    <a href="index.html#contatos">Contatos</a>
+                </div>
+                <div class="footer-section">
+                    <h4>EMERGÊNCIA</h4>
+                    <p class="emergency-number">LIGUE 192</p>
+                    <p>SAMU - Atendimento Móvel de Urgência</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aurora Segura. Site educativo para orientação em emergências médicas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
